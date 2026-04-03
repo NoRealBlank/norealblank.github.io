@@ -4,14 +4,16 @@
 @use "variables" as v;
 @use "sass:color";
 
+$darker-cyan: darken(v.$cyan-color, 25%);
+
 :root {
   color-scheme: light;
   --global-bg-color: #{v.$white-color};
   --global-code-bg-color: #{v.$code-bg-color-light};
   --global-text-color: #{v.$black-color};
   --global-text-color-light: #{v.$grey-color};
-  --global-theme-color: #{v.$cyan-color};
-  --global-hover-color: #{v.$cyan-color};
+  --global-theme-color: #{v.$darker-cyan};
+  --global-hover-color: #{v.$darker-cyan};
   --global-hover-text-color: #{v.$white-color};
   --global-footer-bg-color: #{v.$grey-color-dark};
   --global-footer-text-color: #{v.$grey-color-light};
