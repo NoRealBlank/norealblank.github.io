@@ -4,7 +4,7 @@
 @use "variables" as v;
 @use "sass:color";
 
-$darker-cyan: darken(v.$cyan-color, 15%);
+$darker-cyan: darken(v.$cyan-color, 10%);
 
 :root {
   color-scheme: light;
