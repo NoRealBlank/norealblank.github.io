@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: zhangrunze0311 (at) gmail (dot) com # <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: `zhangrunze0311 (at) gmail (dot) com` # <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
@@ -27,7 +27,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I received my Bachelor's degree of Computer Science and Technology with honors from Tongji University, advised by Prof. Guang Chen. During my undergraduate years, I was honored to work with Prof. Auke Ijspeert at EPFL and Prof. Hao Su at UCSD.
+I received my Bachelor's degree of Computer Science and Technology with honors from Tongji University, advised by [Prof. Guang Chen](https://scholar.google.com/citations?user=kBhIyv4AAAAJ). During my undergraduate years, I was fortunate to work with [Prof. Auke Ijspeert](https://www.epfl.ch/labs/biorob/people/ijspeert/) at EPFL and [Prof. Hao Su](https://cseweb.ucsd.edu/~haosu/) at UCSD.
 
 [//]: # (Write your biography here. Tell the world about yourself. Link to your favorite [subreddit]&#40;https://www.reddit.com&#41;. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.)
 
