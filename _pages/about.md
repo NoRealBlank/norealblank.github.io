@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: "<code>zhangrunze0311 (at) gmail (dot) com</code>" # <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <b>zhangrunze0311 (at) gmail (dot) com</b> # <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
