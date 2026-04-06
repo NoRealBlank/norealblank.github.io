@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: "Contact: <code class='language-plaintext highlighter-rouge'>zhangrunze0311 (at) gmail (dot) com</code>" # <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <code class="language-plaintext highlighter-rouge">zhangrunze0311 (at) gmail.com</code> · <code class="language-plaintext highlighter-rouge">zrz2053620 (at) tongji.edu.cn</code> # <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
