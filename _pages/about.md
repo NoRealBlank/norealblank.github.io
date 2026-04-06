@@ -29,6 +29,8 @@ latest_posts:
 
 I received my Bachelor's degree of Computer Science and Technology with honors from Tongji University, advised by [Prof. Guang Chen](https://scholar.google.com/citations?user=kBhIyv4AAAAJ). During my undergraduate years, I was fortunate to work with [Prof. Auke Ijspeert](https://www.epfl.ch/labs/biorob/people/ijspeert/) at EPFL and [Prof. Hao Su](https://cseweb.ucsd.edu/~haosu/) at UCSD.
 
+Recently, I'm interested in robotic manipulation in dynamic environments, and humanoid sports.
+
 [//]: # (Write your biography here. Tell the world about yourself. Link to your favorite [subreddit]&#40;https://www.reddit.com&#41;. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.)
 
 [//]: # ()
