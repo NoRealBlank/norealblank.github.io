@@ -56,7 +56,7 @@ aiming to model these insights,
 and use them to guide the refinement or redesign of robotic systems.
 Consequently, my current research interest is focused on **interpretability** within robot learning.
 
-<br><br>
+<br>
 
 [//]: # (Recently, I'm interested in robotic manipulation in dynamic environments, and humanoid sports.)
 
