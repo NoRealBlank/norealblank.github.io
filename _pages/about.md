@@ -27,9 +27,35 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I received my Bachelor's degree of Computer Science and Technology with honors from Tongji University, advised by [Prof. Guang Chen](https://scholar.google.com/citations?user=kBhIyv4AAAAJ). During my undergraduate years, I was fortunate to work with [Prof. Auke Ijspeert](https://www.epfl.ch/labs/biorob/people/ijspeert/) at EPFL and [Prof. Hao Su](https://cseweb.ucsd.edu/~haosu/) at UCSD.
+I received my Bachelor's degree of Computer Science and Technology with honors from Tongji University,
+advised by [Prof. Guang Chen](https://scholar.google.com/citations?user=kBhIyv4AAAAJ).
+During my undergraduate years, I was fortunate to work with
+[Prof. Auke Ijspeert](https://www.epfl.ch/labs/biorob/people/ijspeert/) at EPFL
+and [Prof. Hao Su](https://cseweb.ucsd.edu/~haosu/) at UCSD.
 
-Recently, I'm interested in robotic manipulation in dynamic environments, and humanoid sports.
+My research journey began with classical 2D computer vision,
+where, as is well known, task-related numerical metrics are the primary criteria for evaluating models.
+However, I gradually realized that an improved metric does not always yield a "better" vision model in practice;
+that is, a model's output is not the final destination.
+*Instead, individual models should serve as vital components within a broader functional pipeline,
+where their true value is defined by their contribution to the overall system-level objectives.*
+This realization led me to pivot toward robotics,
+a field that requires integrating various modules, from perception to control,
+to achieve functional goals such as task success rates in manipulation.
+
+Furthermore, I believe the ultimate goal for most of the leading brains in robotics
+is to build general-purpose robotic systems that function robustly in the complex real world.
+Yet, the rise of LLMs, the scaling laws,
+and the dominance of industry giants have prompted me to rethink my role.
+Identifying as a researcher rather than an engineer, I find myself more drawn
+to the **underlying mechanisms** behind the emerging phenomena or questions in robot learning.
+I want to uncover the fundamental reasons
+*why certain approaches succeed while others fail and how they work*,
+aiming to model these insights,
+and use them to guide the refinement or redesign of robotic systems.
+Consequently, my current research interest is focused on **interpretability** within robot learning.
+
+[//]: # (Recently, I'm interested in robotic manipulation in dynamic environments, and humanoid sports.)
 
 [//]: # (Write your biography here. Tell the world about yourself. Link to your favorite [subreddit]&#40;https://www.reddit.com&#41;. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.)
 
