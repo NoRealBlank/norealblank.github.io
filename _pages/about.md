@@ -7,9 +7,9 @@ subtitle: <code class="language-plaintext highlighter-rouge">zhangrunze0311 (at)
 profile:
   align: right
   image: rzhang.png
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    Photographed in Lausanne, Switzerland
+  image_circular: true # crops the image to make it circular
+  more_info: # >
+#    Photographed in Lausanne, Switzerland
 #     <p>555 your office number</p>
 #     <p>123 your address street</p>
 #     <p>Your City, State 12345</p>
