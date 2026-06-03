@@ -42,7 +42,7 @@ that is, a model's output is not the final destination.
 where their true value is defined by their contribution to the overall system-level objectives.*
 This realization led me to pivot toward robotics,
 a field that requires integrating various modules, from perception to control,
-to achieve functional goals such as task success rates in manipulation.
+to achieve functional goals such as task success in manipulation.
 
 Furthermore, I believe the ultimate goal for most of the leading brains in robotics
 is to build general-purpose robotic systems that function robustly in the complex real world.
