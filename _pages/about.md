@@ -28,7 +28,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I received my Bachelor's degree of Computer Science and Technology with honors from Tongji University,
+I'm an incoming Ph.D. student at HKU IDS, advised by [Prof. Andrew Luo](https://andrewluo.net/). I received my Bachelor's degree of Computer Science and Technology with honors from Tongji University,
 advised by [Prof. Guang Chen](https://scholar.google.com/citations?user=kBhIyv4AAAAJ).
 During my undergraduate years, I was fortunate to work with
 [Prof. Auke Ijspeert](https://www.epfl.ch/labs/biorob/people/ijspeert/) at EPFL
@@ -54,7 +54,7 @@ I want to uncover the fundamental reasons
 *why certain approaches succeed while others fail and how they work*,
 aiming to model these insights,
 and use them to guide the refinement or redesign of robotic systems.
-Consequently, my current research interest is focused on **interpretability** within robot learning.
+Consequently, my current research interest is focused on **interpretability** within robot learning. Of course, I remain committed to developing robot learning systems, but with a greater focus on interpretability.
 
 <br>
 
