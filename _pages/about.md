@@ -28,7 +28,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I'm an incoming Ph.D. student at HKU IDS, advised by [Prof. Andrew Luo](https://andrewluo.net/). I received my Bachelor's degree of Computer Science and Technology with honors from Tongji University,
+I'm an incoming Ph.D. student at [HKU IDS](https://datascience.hku.hk/) & [SLAI](https://www.slai.edu.cn/), primarily advised by [Prof. Andrew Luo](https://andrewluo.net/). I received my Bachelor's degree of Computer Science and Technology with honors from [Tongji University](https://www.tongji.edu.cn/),
 advised by [Prof. Guang Chen](https://scholar.google.com/citations?user=kBhIyv4AAAAJ).
 During my undergraduate years, I was fortunate to work with
 [Prof. Auke Ijspeert](https://www.epfl.ch/labs/biorob/people/ijspeert/) at EPFL
