@@ -1,11 +1,11 @@
 metadata:
-  last_updated: '2026-05-04'
+  last_updated: '2026-08-10'
 papers:
   TEelyNcAAAAJ:u-x6o8ySG0sC:
     citations: 4
     title: Velocity potential field modulation for dense coordination of polytopic swarms and its application to assistive robotic furniture
     year: '2025'
   TEelyNcAAAAJ:u5HHmVD_uO8C:
-    citations: 0
+    citations: 2
     title: Bridging the latency gap with a continuous stream evaluation framework in event-driven perception
     year: '2026'
