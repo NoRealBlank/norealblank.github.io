@@ -31,6 +31,25 @@ layout: default
             include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
             cache_bust=true
           %}
+          {% if page.profile.images.size > 0 %}
+            <template id="profile-image-options">
+              {% for profile_image in page.profile.images %}
+                {% assign profile_image_path = profile_image | prepend: 'assets/img/' %}
+                {%
+                  include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile_image
+                  cache_bust=true
+                %}
+              {% endfor %}
+            </template>
+            <script>
+              {
+                const template = document.getElementById('profile-image-options');
+                const images = template.content.children;
+                const selectedImage = images[Math.floor(Math.random() * images.length)];
+                template.previousElementSibling.replaceWith(selectedImage.cloneNode(true));
+              }
+            </script>
+          {% endif %}
         {% endif %}
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>

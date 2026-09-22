@@ -6,7 +6,10 @@ subtitle: <code class="language-plaintext highlighter-rouge">zhangrunze0311 (at)
 
 profile:
   align: right
-  image: rzhang.png
+  image: rzhang_2023.png
+  images: # randomly choose one on each page load
+    - rzhang_2023.png
+    - rzhang_2026.jpg
   image_circular: true # crops the image to make it circular
   more_info: # >
 #     Photographed in Lausanne, Switzerland
