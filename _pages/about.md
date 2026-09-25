@@ -37,6 +37,9 @@ During my undergraduate years, I was fortunate to work with
 [Prof. Auke Ijspeert](https://www.epfl.ch/labs/biorob/people/ijspeert/) at EPFL
 and [Prof. Hao Su](https://cseweb.ucsd.edu/~haosu/) at UCSD.
 
+<details markdown="1">
+<summary><strong>Research vision</strong></summary>
+
 My research journey began with classical 2D computer vision,
 where, as is well known, task-related numerical metrics are the primary criteria for evaluating models.
 However, I gradually realized that an improved metric does not always yield a "better" vision model in practice;
@@ -58,6 +61,10 @@ I want to uncover the fundamental reasons
 aiming to model these insights,
 and use them to guide the refinement or redesign of robotic systems.
 Consequently, my current research interest is focused on **interpretability** within robot learning. Of course, I remain committed to developing robot learning systems, but with a greater focus on interpretability.
+
+</details>
+
+Recently, I have been working on dexterous manipulation.
 
 <br>
 
