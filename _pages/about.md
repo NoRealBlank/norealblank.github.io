@@ -60,7 +60,7 @@ I want to uncover the fundamental reasons
 *why certain approaches succeed while others fail and how they work*,
 aiming to model these insights,
 and use them to guide the refinement or redesign of robotic systems.
-Consequently, my current research interest is focused on **interpretability** within robot learning. Of course, I remain committed to developing robot learning systems, but with a greater focus on interpretability.
+<!-- Consequently, my current research interest is focused on **interpretability** within robot learning. Of course, I remain committed to developing robot learning systems, but with a greater focus on interpretability. -->
 
 </details>
 
