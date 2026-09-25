@@ -31,14 +31,14 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I'm an incoming Ph.D. student at [HKU IDS](https://datascience.hku.hk/) & [SLAI](https://www.slai.edu.cn/), primarily advised by [Prof. Andrew Luo](https://andrewluo.net/). I received my Bachelor's degree of Computer Science and Technology with honors from [Tongji University](https://www.tongji.edu.cn/),
+I'm an Ph.D. student at [HKU](https://www.hku.hk/) & [SLAI](https://www.slai.edu.cn/), primarily advised by [Prof. Andrew Luo](https://andrewluo.net/). I received my Bachelor's degree of Computer Science and Technology with honors from [Tongji University](https://www.tongji.edu.cn/),
 advised by [Prof. Guang Chen](https://scholar.google.com/citations?user=kBhIyv4AAAAJ).
 During my undergraduate years, I was fortunate to work with
 [Prof. Auke Ijspeert](https://www.epfl.ch/labs/biorob/people/ijspeert/) at EPFL
 and [Prof. Hao Su](https://cseweb.ucsd.edu/~haosu/) at UCSD.
 
 <details markdown="1">
-<summary><strong>Research vision</strong></summary>
+<summary><strong>Research Vision</strong></summary>
 
 My research journey began with classical 2D computer vision,
 where, as is well known, task-related numerical metrics are the primary criteria for evaluating models.
@@ -63,6 +63,8 @@ and use them to guide the refinement or redesign of robotic systems.
 Consequently, my current research interest is focused on **interpretability** within robot learning. Of course, I remain committed to developing robot learning systems, but with a greater focus on interpretability.
 
 </details>
+
+<br>
 
 Recently, I have been working on dexterous manipulation.
 
