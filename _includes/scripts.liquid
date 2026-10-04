@@ -1,4 +1,8 @@
 <!-- jQuery -->
+{% if site.enable_publication_thumbnails %}
+  <script defer src="{{ '/assets/js/publication-previews.js' | relative_url | bust_file_cache }}"></script>
+{% endif %}
+
 <script
   src="{{ site.third_party_libraries.jquery.url.js }}"
   integrity="{{ site.third_party_libraries.jquery.integrity.js }}"
