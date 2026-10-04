@@ -91,6 +91,23 @@
         img {
           object-position: center;
         }
+
+        // Reframe the 2026 portrait inside a stationary circular crop.
+        picture:has(> img[src*="/rzhang_2026.jpg"].rounded-circle) {
+          display: block;
+          border-radius: 50%;
+          overflow: hidden;
+          box-shadow:
+            0 2px 5px 0 rgba(0, 0, 0, 0.16),
+            0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+          img {
+            display: block;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            transform: translate(-2.5%, -3%) scale(1.08);
+          }
+        }
       }
 
       .about-bio {
