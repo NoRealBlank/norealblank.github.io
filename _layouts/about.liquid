@@ -1,63 +1,80 @@
 ---
 layout: default
 ---
-<div class="post">
+<div class="post about-page">
   <header class="post-header">
     <h1 class="post-title">
-      {% if site.title == 'blank' %}
+      {% if page.display_name %}
+        <span class="name-primary">{{ page.display_name | escape }}</span>
+        {% if page.native_name %}
+          <span class="name-native" lang="zh">『{{ page.native_name | escape }}』</span>
+        {% endif %}
+      {% elsif site.title == 'blank' %}
         <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
         {{ site.last_name }}
       {% else %}
         {{ site.title }}
       {% endif %}
     </h1>
-    <p class="desc">{{ page.subtitle }}</p>
+    {% if page.contacts %}
+      <ul class="contact-list" aria-label="Email addresses">
+        {% for contact in page.contacts %}
+          <li>
+            <span class="contact-label">{{ contact.label | escape }}</span>
+            <a href="mailto:{{ contact.email | escape }}">{{ contact.email | replace: '@', ' (at) ' | escape }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% elsif page.subtitle %}
+      <p class="desc">{{ page.subtitle }}</p>
+    {% endif %}
   </header>
 
   <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
+    <div class="about-intro{% if page.profile %} has-profile{% endif %}{% if page.profile.align == 'left' %} profile-left{% endif %}">
+      {% if page.profile %}
+        <div class="profile">
+          {% if page.profile.image %}
+            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+            {% if page.profile.image_circular %}
+              {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+            {% else %}
+              {% assign profile_image_class = 'img-fluid z-depth-1
       rounded' %}
+            {% endif %}
+            {% assign sizes = '(min-width: 768px) 240px, 192px' %}
+            {%
+              include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+              cache_bust=true
+            %}
+            {% if page.profile.images.size > 0 %}
+              <template id="profile-image-options">
+                {% for profile_image in page.profile.images %}
+                  {% assign profile_image_path = profile_image | prepend: 'assets/img/' %}
+                  {%
+                    include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile_image
+                    cache_bust=true
+                  %}
+                {% endfor %}
+              </template>
+              <script>
+                {
+                  const template = document.getElementById('profile-image-options');
+                  const images = template.content.children;
+                  const selectedImage = images[Math.floor(Math.random() * images.length)];
+                  template.previousElementSibling.replaceWith(selectedImage.cloneNode(true));
+                }
+              </script>
+            {% endif %}
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-          {% if page.profile.images.size > 0 %}
-            <template id="profile-image-options">
-              {% for profile_image in page.profile.images %}
-                {% assign profile_image_path = profile_image | prepend: 'assets/img/' %}
-                {%
-                  include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile_image
-                  cache_bust=true
-                %}
-              {% endfor %}
-            </template>
-            <script>
-              {
-                const template = document.getElementById('profile-image-options');
-                const images = template.content.children;
-                const selectedImage = images[Math.floor(Math.random() * images.length)];
-                template.previousElementSibling.replaceWith(selectedImage.cloneNode(true));
-              }
-            </script>
+          {% if page.profile.more_info %}
+            <div class="more-info">{{ page.profile.more_info }}</div>
           {% endif %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
+        </div>
+      {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+      <div class="about-bio">{{ content }}</div>
+    </div>
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
@@ -77,7 +94,7 @@ layout: default
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
+      <h2 class="selected-publications-heading">
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
       </h2>
       {% include selected_papers.liquid %}

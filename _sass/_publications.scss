@@ -37,14 +37,61 @@
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
+      margin-bottom: 1.75rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .publication-entry {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.75rem;
+        align-items: start;
+      }
+
+      .publication-media {
+        width: 240px;
+        max-width: 100%;
+        margin-inline: auto;
+
+        figure {
+          margin: 0;
+        }
+
+        picture {
+          display: block;
+        }
+      }
+
+      .publication-content {
+        min-width: 0;
+      }
 
       .preview {
-        display: inline-block;
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: contain;
+        border: 1px solid var(--global-divider-color);
+        background-color: var(--global-bg-color);
+      }
+
+      @media (min-width: 576px) {
+        .publication-entry-with-media {
+          grid-template-columns: 160px minmax(0, 1fr);
+          column-gap: 1.5rem;
+        }
+
+        .publication-media {
+          width: 160px;
+          margin-inline: 0;
+        }
       }
 
       .abbr {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0;
 
         abbr {
           display: inline-block;
@@ -68,11 +115,21 @@
       }
 
       .title {
-        font-weight: bolder;
+        font-size: 1.02rem;
+        font-weight: 600;
+        line-height: 1.4;
+        margin-bottom: 0.3rem;
       }
 
       .author {
+        color: var(--global-text-color-light);
+        color: color-mix(in srgb, var(--global-text-color) 65%, var(--global-bg-color));
+        font-size: 0.9rem;
+        font-weight: 400;
+        line-height: 1.55;
+
         a {
+          color: inherit;
           border-bottom: 1px dashed var(--global-theme-color);
 
           &:hover {
@@ -82,8 +139,10 @@
         }
 
         > em {
+          color: var(--global-text-color);
           border-bottom: 1px solid;
           font-style: normal;
+          font-weight: 500;
         }
 
         > span.more-authors {
@@ -98,15 +157,34 @@
         }
       }
 
+      .periodical {
+        color: var(--global-text-color-light);
+        color: color-mix(in srgb, var(--global-text-color) 65%, var(--global-bg-color));
+        font-size: 0.88rem;
+        line-height: 1.55;
+        margin-top: 0.25rem;
+
+        em {
+          color: inherit;
+        }
+      }
+
       .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 0.65rem;
+
         a.btn {
           color: var(--global-text-color);
-          border: 1px solid var(--global-text-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
-          margin-left: 0;
+          border: 1px solid var(--global-divider-color);
+          border-radius: 0.25rem;
+          font-size: 0.75rem;
+          font-weight: 500;
+          line-height: 1.5;
+          padding: 0.25rem 0.6rem;
+          margin: 0;
+          text-transform: none;
 
           &:hover {
             color: var(--global-theme-color);
