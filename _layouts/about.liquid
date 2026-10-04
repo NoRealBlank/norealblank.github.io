@@ -17,14 +17,31 @@ layout: default
       {% endif %}
     </h1>
     {% if page.contacts %}
-      <ul class="contact-list" aria-label="Email addresses">
-        {% for contact in page.contacts %}
-          <li>
-            <span class="contact-label">{{ contact.label | escape }}</span>
-            <a href="mailto:{{ contact.email | escape }}">{{ contact.email | replace: '@', ' (at) ' | escape }}</a>
-          </li>
-        {% endfor %}
-      </ul>
+      <div class="contact-row" data-email-contacts role="group" aria-label="Email addresses, click to copy">
+        <span class="contact-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
+        <ul class="contact-list">
+          {% for contact in page.contacts %}
+            <li>
+              <button
+                type="button"
+                class="email-copy"
+                data-copy-email="{{ contact.email | escape }}"
+                data-contact-label="{{ contact.label | escape }}"
+                aria-label="Copy {{ contact.label | escape }} email address: {{ contact.email | escape }}"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Click to copy: {{ contact.email | escape }}"
+              >
+                {{ contact.label | escape }}
+              </button>
+            </li>
+          {% endfor %}
+        </ul>
+        <span class="sr-only" data-email-status role="status" aria-live="polite"></span>
+        <div class="contact-copy-fallback" data-email-fallback hidden>
+          <label>Copy email address <input type="text" readonly data-email-field></label>
+        </div>
+      </div>
     {% elsif page.subtitle %}
       <p class="desc">{{ page.subtitle }}</p>
     {% endif %}
@@ -37,14 +54,15 @@ layout: default
           {% if page.profile.image %}
             {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
             {% if page.profile.image_circular %}
-              {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+              {% assign profile_image_class = 'img-fluid rounded-circle' %}
             {% else %}
               {% assign profile_image_class = 'img-fluid z-depth-1
       rounded' %}
             {% endif %}
-            {% assign sizes = '(min-width: 768px) 240px, 192px' %}
+            {% assign sizes = '(min-width: 576px) 150px, 96px' %}
+            {% assign profile_image_alt = page.display_name | default: site.title %}
             {%
-              include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+              include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile_image_alt
               cache_bust=true
             %}
             {% if page.profile.images.size > 0 %}
@@ -52,7 +70,7 @@ layout: default
                 {% for profile_image in page.profile.images %}
                   {% assign profile_image_path = profile_image | prepend: 'assets/img/' %}
                   {%
-                    include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile_image
+                    include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile_image_alt
                     cache_bust=true
                   %}
                 {% endfor %}

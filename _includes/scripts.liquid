@@ -1,4 +1,7 @@
 <!-- jQuery -->
+{% if page.contacts %}
+  <script defer src="{{ '/assets/js/email-contacts.js' | relative_url | bust_file_cache }}"></script>
+{% endif %}
 {% if site.enable_publication_thumbnails %}
   <script defer src="{{ '/assets/js/publication-previews.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}

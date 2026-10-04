@@ -2,33 +2,38 @@
  * Publication and bibliography styles
  ******************************************************************************/
 
-@use "variables" as v;
-
 .publications {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 
   h1 {
     color: var(--global-theme-color);
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    font-size: 1.75rem;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 1rem;
   }
 
   h2 {
     margin-bottom: 1rem;
 
     span {
-      font-size: 1.5rem;
+      font-size: 1.375rem;
     }
   }
 
   h2.bibliography {
     color: var(--global-divider-color);
     border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
-    margin-top: 2rem;
+    padding-top: 0.5rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 500;
     text-align: right;
+
+    span {
+      font-size: inherit;
+    }
   }
 
   ol.bibliography {
@@ -37,7 +42,7 @@
     margin-top: 0;
 
     li {
-      margin-bottom: 1.75rem;
+      margin-bottom: 1.375rem;
 
       &:last-child {
         margin-bottom: 0;
@@ -50,10 +55,14 @@
         align-items: start;
       }
 
+      .publication-entry-with-media {
+        grid-template-columns: 86px minmax(0, 1fr);
+      }
+
       .publication-media {
-        width: 240px;
+        width: 86px;
         max-width: 100%;
-        margin-inline: auto;
+        margin-inline: 0;
 
         figure {
           margin: 0;
@@ -74,19 +83,18 @@
         height: auto;
         aspect-ratio: 4 / 3;
         object-fit: contain;
-        border: 1px solid var(--global-divider-color);
         background-color: var(--global-bg-color);
+        border-radius: 0 !important;
       }
 
       @media (min-width: 576px) {
         .publication-entry-with-media {
-          grid-template-columns: 160px minmax(0, 1fr);
-          column-gap: 1.5rem;
+          grid-template-columns: 142px minmax(0, 1fr);
+          column-gap: 1.125rem;
         }
 
         .publication-media {
-          width: 160px;
-          margin-inline: 0;
+          width: 142px;
         }
       }
 
@@ -94,16 +102,29 @@
         margin-bottom: 0;
 
         abbr {
-          display: inline-block;
-          background-color: var(--global-theme-color);
-          margin-bottom: 0.5rem;
-          color: var(--global-card-bg-color) !important;
+          display: block;
+          padding: 0;
+          margin-bottom: 0.3125rem;
+          background-color: transparent !important;
+          color: var(--global-text-color-light) !important;
+          border: 0;
+          border-radius: 0 !important;
+          box-shadow: none;
+          font-size: 0.6875rem;
+          font-weight: 500;
+          line-height: 1.4;
+          text-align: center;
+          text-decoration: none;
+          white-space: normal;
+          overflow-wrap: anywhere;
 
           a {
-            color: white;
+            color: inherit;
 
             &:hover {
-              text-decoration: none;
+              color: var(--global-theme-color);
+              text-decoration: underline;
+              text-underline-offset: 3px;
             }
           }
         }
@@ -115,16 +136,16 @@
       }
 
       .title {
-        font-size: 1.02rem;
+        font-size: 0.9375rem;
         font-weight: 600;
         line-height: 1.4;
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.25rem;
       }
 
       .author {
         color: var(--global-text-color-light);
         color: color-mix(in srgb, var(--global-text-color) 65%, var(--global-bg-color));
-        font-size: 0.9rem;
+        font-size: 0.78125rem;
         font-weight: 400;
         line-height: 1.55;
 
@@ -160,8 +181,8 @@
       .periodical {
         color: var(--global-text-color-light);
         color: color-mix(in srgb, var(--global-text-color) 65%, var(--global-bg-color));
-        font-size: 0.88rem;
-        line-height: 1.55;
+        font-size: 0.8125rem;
+        line-height: 1.5;
         margin-top: 0.25rem;
 
         em {
@@ -172,27 +193,45 @@
       .links {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.4rem;
-        margin-top: 0.65rem;
+        align-items: center;
+        gap: 0.25rem 0.8125rem;
+        margin-top: 0.375rem;
 
         a.btn {
-          color: var(--global-text-color);
-          border: 1px solid var(--global-divider-color);
-          border-radius: 0.25rem;
+          color: var(--global-theme-color);
+          background: transparent;
+          border: 0;
+          border-radius: 0;
+          box-shadow: none;
           font-size: 0.75rem;
-          font-weight: 500;
+          font-weight: 400;
           line-height: 1.5;
-          padding: 0.25rem 0.6rem;
+          padding: 0.125rem 0;
           margin: 0;
           text-transform: none;
 
           &:hover {
             color: var(--global-theme-color);
-            border-color: var(--global-theme-color);
+            background: transparent;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+          }
+
+          &:focus-visible {
+            outline: 2px solid var(--global-theme-color);
+            outline-offset: 3px;
           }
         }
         a.award.btn {
-          border-color: var(--global-highlight-color);
+          color: var(--global-highlight-color);
+        }
+      }
+
+      @media (pointer: coarse) {
+        .links a.btn {
+          display: inline-flex;
+          align-items: center;
+          min-height: 44px;
         }
       }
 
@@ -200,7 +239,7 @@
         padding-bottom: 0.5rem;
         span {
           display: inline-block;
-          color: v.$black-color;
+          color: var(--global-text-color);
           height: 100%;
           padding-right: 0.5rem;
           vertical-align: middle;

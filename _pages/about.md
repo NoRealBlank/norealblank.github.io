@@ -46,12 +46,15 @@ During my undergraduate years, I was fortunate to work with
 and [Prof. Hao Su](https://cseweb.ucsd.edu/~haosu/) at UCSD.
 
 <details class="research-vision" markdown="1">
-<summary><strong>Research Vision</strong></summary>
+<summary><em>Research Vision</em></summary>
+
+<div class="research-vision-content" markdown="1">
 
 My research journey began with classical 2D computer vision,
 where, as is well known, task-related numerical metrics are the primary criteria for evaluating models.
 However, I gradually realized that an improved metric does not always yield a "better" vision model in practice;
 that is, a model's output is not the final destination.
+
 _Instead, individual models should serve as vital components within a broader functional pipeline,
 where their true value is defined by their contribution to the overall system-level objectives._
 This realization led me to pivot toward robotics,
@@ -62,14 +65,17 @@ Furthermore, I believe the ultimate goal for most of the leading brains in robot
 is to build general-purpose robotic systems that function robustly in the complex real world.
 Yet, the rise of LLMs, the scaling laws,
 and the dominance of industry giants have prompted me to rethink my role.
+
 Identifying as a researcher rather than an engineer, I find myself more drawn
-to the **underlying mechanisms** behind the emerging phenomena or questions in robot learning.
+to the _underlying mechanisms_ behind the emerging phenomena or questions in robot learning.
 I want to uncover the fundamental reasons
 _why certain approaches succeed while others fail and how they work_,
 aiming to model these insights,
 and use them to guide the refinement or redesign of robotic systems.
 
-<!-- Consequently, my current research interest is focused on **interpretability** within robot learning. Of course, I remain committed to developing robot learning systems, but with a greater focus on interpretability. -->
+<!-- Consequently, my current research interest is focused on _interpretability_ within robot learning. Of course, I remain committed to developing robot learning systems, but with a greater focus on interpretability. -->
+
+</div>
 
 </details>
 

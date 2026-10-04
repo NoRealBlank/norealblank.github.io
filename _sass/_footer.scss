@@ -25,15 +25,15 @@ footer.fixed-bottom {
 
 footer.sticky-bottom {
   border-top: 1px solid var(--global-divider-color);
-  padding-top: 24px;
-  padding-bottom: 24px;
+  margin-top: 28px !important;
+  padding-top: 14px;
+  padding-bottom: 18px;
   font-size: 0.75rem;
-  line-height: 1.7;
+  line-height: 1.6;
 
   .container {
-    color: var(--global-text-color);
-    opacity: 0.7;
-    text-align: center;
+    color: var(--global-text-color-light);
+    text-align: left;
   }
 
   a {
