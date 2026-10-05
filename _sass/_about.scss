@@ -25,7 +25,7 @@
 
     .name-native {
       color: var(--global-text-color-light);
-      font-size: 1.0625rem;
+      font-size: inherit;
       font-weight: 400;
       letter-spacing: 0.05em;
     }
@@ -64,15 +64,10 @@
         color: var(--global-text-color-light);
         padding-inline: 0.5625rem;
       }
-
-      &:first-child .email-copy {
-        min-width: 3.75rem;
-      }
     }
   }
 
   .email-copy {
-    min-width: 3rem;
     padding: 0.125rem 0;
     border: 0;
     background: transparent;
@@ -255,10 +250,6 @@
     .post-title {
       gap: 0.35rem 0.625rem;
       font-size: 1.8125rem;
-
-      .name-native {
-        font-size: 0.9375rem;
-      }
     }
 
     .about-intro.has-profile {
